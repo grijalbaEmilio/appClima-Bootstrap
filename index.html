@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app-clima-bootstrap</title>
+    <link rel="stylesheet" href="./resources/css/bootstrap.css">
+    <script defer type="module" src="./resources/js/index.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+</head>
+
+<body class="bg-light bg-gradient mt-3 mx-2">
+    <main class="container-lg ">
+
+        <!-- lista seleccionable -->
+        <form action="#" id="app-form" class="row mb-2">
+
+            <label for="countries" class="col-md row mx-1 ">
+                <span class="col ">Países</span>
+                <select name="countries" class="col-xxl bg-secondary rounded border-0 text-white p-1"
+                    id="countries"></select>
+            </label>
+
+            <label for="cities" class="col-md row mx-1">
+                <span class="col">Ciudades</span>
+                <select name="cities" class="col-xxl bg-secondary rounded border-0 text-white p-1" id="cities"></select>
+            </label>
+
+        </form>
+        <!-- Contenido -->
+        <section id="weather-info" class="mx-3 bg-primary rounded text-white text-center my-2 p-2">
+            <!-- Información del clima -->
+
+        </section>
+        <!-- Mapa -->
+        <div class=" d-flex flex-column align-items-center">
+            <h1 id="titulo" class="my-2 fst-italic text-info">Ubucación geográfica de Manizales</h1>
+
+            <div id="myMap" class="progress bg-white p-2 rounded" style="height: 200px; width: 70%;">.</div>
+        </div>
+        <!-- toast -->
+        <div id="on-top" class="position-fixed top-0 end-0 p-3">
+            <div id="message" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <i id="icon"></i>
+                    <strong class="me-auto">Bootstrap</strong>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
